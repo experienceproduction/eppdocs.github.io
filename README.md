@@ -1,1 +1,1 @@
-_config.yml
+eppdocs.github.io
