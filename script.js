@@ -5,7 +5,7 @@ function print() {
     docPDF.html(elementHTML, {
         callback: function(docPDF) {
             docPDF.save('HTML Linuxhint web page.pdf');
-        }
+        },
         x: 15,
         y: 15,
         width: 170,
