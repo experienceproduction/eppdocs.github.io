@@ -1,30 +1,9 @@
-/* window.jsPDF = window.jspdf.jsPDF;
-var docPDF = new jsPDF();
-function print() {
-    var elementHTML = document.querySelector("#contentToPrint");
-    docPDF.html(elementHTML, {
-        callback: function(docPDF) {
-            docPDF.save('HTML Linuxhint web page.pdf');
-        },
-        x: 15,
-        y: 15,
-        width: 170,
-        windowWidth: 650
-    });
-} */
+const scriptURL = 'https://script.google.com/macros/s/AKfycbykreJjT4kGyVgv6XQq4zo5WVhJWSG0Ad0b0iHp-d-JSrpcZc2HgJztuayYhUZ7MO_m/exec'
+const form = document.forms['submit-to-google-sheet']
 
-var $form = $('form#test-form'),
-    // url = 'https://script.google.com/macros/s/abcdefghijklmnopqrstuvwxyz1234567890/exec'
-    url = 'https://script.google.com/macros/s/AKfycbzOVlMHIAU4ielb0i_YnrecYvuRhQKcbuRXulYuRDa0rIB4cxKcPx88qR8NW_3Af7pHZQ/exec'
-
-$('#submit-form').on('click', function (e) {
-    e.preventDefault();
-    var jqxhr = $.ajax({
-        url: url,
-        method: "GET",
-        dataType: "json",
-        data: $form.serializeObject()
-    }).success(
-        // do something
-    );
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
 })
