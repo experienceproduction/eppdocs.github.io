@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgrey;
+    margin: 1em;
+    display: flex;
+}
+
+.container {
+    background-color: #eee;
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+}
+
+.card-body {
+    border: 1px solid;
+    border-color: #bbb;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+form {
+    /* border: 1px solid #fbb; */
+    display: flex;
+    flex-flow: row wrap;
+    gap: 4px;
+}
+
+form * input {
+    background-color: #fff;
+    border: none;
+    padding: 0.4em;
+    border-radius: 100vw;
+    width: 100%;
+}
+
+form .btn-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin-top: 0.3em;
+    padding-top: 0.5em;
+}
+
+form .btn-group button {
+    border: none;
+    background-color: #7da;
+    border-radius: 100vw;
+    padding: 6px 10%;
+}
+
+form button.reset {
+    background-color: #fab;
+}

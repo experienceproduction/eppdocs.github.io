@@ -14,7 +14,7 @@
     <br>
     <h1>HTML form submit to Google Sheet</h1>
     <br>
-    <div class="card mx-auto" style="width: 18rem;">
+    <div class="card mx-auto">
       <div class="card-body">
         <form name="submit-to-google-sheet">
           <div class="mb-3">
@@ -25,7 +25,10 @@
             <input name="email" type="email" class="form-control" placeholder="Email" required>
           </div>
 
-          <button type="submit" class="btn btn-primary">Send</button>
+          <div class="btn-group">
+            <button type="reset" class="btn reset btn-secondary">Reset</button>
+            <button type="submit" class="btn send btn-primary">Send</button>
+          </div>
         </form>
       </div>
     </div>
